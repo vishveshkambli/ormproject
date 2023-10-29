@@ -1,0 +1,30 @@
+<h1>Employee Information</h1>
+
+<!-- {%for i in el%}
+<p>{{i.id}}</p>
+{%endfor%} -->
+
+<table border="1" cellspacling="1">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>emp</th>
+        <th>contact</th>
+        <th>age</th>
+        <th>address</th>
+        <th colspan="3">action</th>
+    </tr>
+    {%for i in el%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.contact}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.address}}</td>
+        <td><a href="delete1?id={{i.id}}">delete1</a></td>
+        <td><a href="delete2/{{i.id}}">delete2</a></td>
+        <td><a href="edit/{{i.id}}">edit</a></td>
+    </tr>
+    {%endfor%}
+</table>
